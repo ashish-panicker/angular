@@ -7,8 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MultiComponent implements OnInit {
 
-  @Input("num1") strNum1:string;
-  @Input("num2") strNum2:string;
+  @Input("a") strNum1:string;
+  @Input("b") strNum2:string;
 
   num1:number;
   num2:number;
@@ -20,7 +20,7 @@ export class MultiComponent implements OnInit {
   ngOnInit() {
     this.num2 = parseInt(this.strNum2);
     this.num1 = parseInt(this.strNum1);
-    
+
     for (let index = 1; index <= this.num2; index++) {
       this.nums.push(index);
     }
